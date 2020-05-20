@@ -1,0 +1,189 @@
+/** @format */
+
+#logo {
+  text-align: center;
+  width: 360px;
+  height: 160px;
+}
+
+#cmd {
+  font-family: "Source Code Pro", monospace;
+  background-color: rgb(242, 239, 220);
+  color: rgb(61, 55, 55);
+  font-weight: 800;
+  font-size: 16px;
+  padding-top: 0.3em;
+  padding-left: 0.3em;
+  padding-right: 3.5em;
+  padding-bottom: 2em;
+  float: left;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+#prompt {
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-timing-function: steps(1);
+  animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+  50% {
+    opacity: 0;
+  }
+}
+
+#marc {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 75px;
+}
+
+#slash {
+  font-family: "Montserrat", sans-serif;
+  font-size: 75px;
+}
+
+#title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-top: 2px rgba(255, 165, 130, 0.25) solid;
+  padding-top: 10px;
+}
+
+#contact {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.blog {
+  margin: 1em;
+  padding: 1em;
+  background-color: rgb(242, 239, 220, 0.5);
+}
+
+.content {
+  margin: 1em;
+  padding: 1em;
+  background-color: rgb(242, 239, 220, 0.5);
+}
+
+.left {
+  background-color: rgb(61, 55, 55);
+  color: rgb(255, 165, 130);
+}
+
+.left a {
+  color: rgb(255, 165, 130);
+}
+
+.right {
+  background-color: rgb(255, 165, 130);
+  color: rgb(61, 55, 55);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  list-style-type: none;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px 14px;
+}
+
+.main-nav {
+  width: 1000px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-color: rgb(255, 165, 130);
+  padding: 10px;
+}
+
+.right a {
+  color: rgb(61, 55, 55);
+}
+
+.main-nav a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 77px;
+  padding: 0;
+}
+
+header ul li:hover {
+  background-color: rgb(242, 239, 220, 0.5);
+  color: rgb(255, 165, 130);
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+}
+
+p {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 200;
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+@media (min-width: 800px) {
+  .left {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    left: 0;
+  }
+  #center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .right {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    right: 0;
+  }
+}
+
+@media (max-width: 800px;) {
+  .left {
+  }
+
+  #logo {
+  }
+
+  .right {
+  }
+}
