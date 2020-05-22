@@ -1,11 +1,5 @@
 /** @format */
 
-#logo {
-  text-align: center;
-  width: 360px;
-  height: 160px;
-}
-
 #cmd {
   font-family: "Source Code Pro", monospace;
   background-color: rgb(242, 239, 220);
@@ -17,7 +11,7 @@
   padding-right: 3.5em;
   padding-bottom: 2em;
   float: left;
-  margin-top: 1em;
+  margin-top: 1.5em;
   margin-right: 1em;
 }
 
@@ -51,6 +45,7 @@
   letter-spacing: 2px;
   border-top: 2px rgba(255, 165, 130, 0.25) solid;
   padding-top: 10px;
+  text-align: center;
 }
 
 #contact {
@@ -84,47 +79,27 @@
   background-color: rgb(255, 165, 130);
   color: rgb(61, 55, 55);
 }
-
-ul {
-  margin: 0;
-  padding: 0;
+.nav {
+  background-color: rgb(61, 55, 55);
+  position: sticky;
 }
 
-header ul li {
-  list-style-type: none;
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 10px 14px;
-}
-
-.main-nav {
-  width: 1000px;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  background-color: rgb(255, 165, 130);
-  padding: 10px;
+.nav-tabs {
+  border: 10px rgb(61, 55, 55);
 }
 
 .right a {
   color: rgb(61, 55, 55);
 }
 
-.main-nav a {
+.nav-tabs a {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   text-decoration: none;
 }
 
-main {
-  margin-top: 77px;
-  padding: 0;
-}
-
-header ul li:hover {
+.nav-tabs a:hover {
   background-color: rgb(242, 239, 220, 0.5);
-  color: rgb(255, 165, 130);
 }
 
 h1 {
@@ -132,6 +107,7 @@ h1 {
   font-weight: 800;
   font-size: 30px;
   margin: 0;
+  margin-bottom: 5px;
 }
 
 h2 {
@@ -139,6 +115,7 @@ h2 {
   font-weight: 400;
   font-size: 18px;
   margin: 0;
+  margin-bottom: 3px;
 }
 
 p {
@@ -177,13 +154,8 @@ p {
   }
 }
 
-@media (max-width: 800px;) {
+@media (max-width: 800px) {
   .left {
-  }
-
-  #logo {
-  }
-
-  .right {
+    padding-bottom: 10px;
   }
 }

@@ -6,10 +6,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marc Burnie</title>
-    <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Stylesheet -->
+      <link rel="stylesheet" href="style.css" />
       <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Code+Pro:wght@600;900&display=swap"
@@ -21,11 +22,13 @@
 
 
   <body>
+
+
     <!-- Left side of screen containing logo -->
-    <div class="left">
-        <div id="center">
+    <div class="container-fluid d-flex flex-column flex-lg-row align-items-start p-0 m-0">
+    <div class="container-fluid left flex-fill d-flex justify-content-center align-items-center">
             <div id="logo">
-                <div id="top">
+                <div id="container-fluid d-flex align-items-end">
                     <!-- █ -->
                     <span id="cmd">><span id="prompt">_</span></span>
                     <span id="slash">// </span>
@@ -43,38 +46,235 @@
                     </span>
                 </div>
             </div>
-        </div>
     </div>
 
     <!-- Right side of screen containing content -->
     <!-- Header -->
-    <div class="right">
-      <header class="page-header">
-        <nav class="main-nav" role="navigation">
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT ME</a></li>
-            <li><a href="resume.html">RESUME</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-          </ul>
-        </nav>
-      </header>
+    <div class="container-fluid right p-0">
+      <!-- Change default nav color for active tab -->
+      <style>
+        a.nav-link {
+          background-color: rgb(61, 55, 55) !important;
+          color:  rgb(255, 165, 130)!important;
+          border: 0px;
+        }
+        a.nav-link:hover {
+          background-color: rgba(247, 121, 72, 0.075) !important;
+          border-color: rgb(255, 165, 130) !important;
+        }
 
-      <!-- Content -->
-      <main>
-        <div class="content">
-          <h1>Welcome!</h1>
-          <p>
-            I've made this website to specifically showcase my knowledge of programming and full-stack web development.
-          </p>
+        a.active.nav-link {
+          background-color: rgb(255, 165, 130) !important;
+          color: rgb(61, 55, 55) !important;
+          border: 0px;
+        }
+      </style>
+      
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+            aria-controls="nav-home" aria-selected="true">HOME</a>
+          <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab"
+            aria-controls="nav-about" aria-selected="false">ABOUT ME</a>
+          <a class="nav-item nav-link" id="nav-resume-tab" data-toggle="tab" href="#nav-resume" role="tab"
+            aria-controls="nav-resume" aria-selected="false">RESUME</a>
+          <a class="nav-item nav-link" id="nav-blog-tab" data-toggle="tab" href="#nav-blog" role="tab"
+            aria-controls="nav-blog" aria-selected="false">BLOG</a>
+
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div class="content">
+            <h1>Welcome!</h1>
+            <p>
+              I've made this website to specifically showcase my knowledge of programming and full-stack web development.
+            </p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+            <div class="content">
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C4D03AQFzPMR2ppxNFg/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=sWjz87x9i5Z2ER7l5MZWFtYANhAAiNUI9uN4q04XSP4"
+                title="Marc" alt="" />
+              <h1></h1>
+              <p>
+                If you're interested in
+                my educational and work related experience, please see
+                <a href="https://www.linkedin.com/in/marcburnie/" title="LinkedIn" target="_blank">my LinkedIn
+                  page</a>.
+              </p>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-resume" role="tabpanel" aria-labelledby="nav-resume-tab">
+            <div class="content">
+            
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-blog" role="tabpanel" aria-labelledby="nav-blog-tab">
+                <!-- <div class="blog">
+                                    <h1>Officially a Blog!</h1>
+                                    <h2>May 17th, 2020</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
+                                        perferendis tempore. Sed repellat hic facilis perferendis quidem,
+                                        quam maxime ad mollitia, quod tenetur, excepturi omnis! Impedit
+                                        accusantium tempora quis. Velit.
+                                    </p>
+                                </div>
+                
+                
+                                <div class="blog">
+                                    <h1>Pair Programming</h1>
+                                    <h2>May 17th, 2020</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
+                                        perferendis tempore. Sed repellat hic facilis perferendis quidem,
+                                        quam maxime ad mollitia, quod tenetur, excepturi omnis! Impedit
+                                        accusantium tempora quis. Velit.
+                
+                                        My experience is to lock myself in a room typing away
+                                    </p>
+                                </div> -->
+                
+                <div class="blog">
+                  <h1>Boot Camp Application Second Impressions</h1>
+                  <h2>May 7th, 2020</h2>
+                  <p>
+                    I've officially been accepted into App Academy, Full Stack Academy, and Codesmith. After three
+                    weeks of learning about each program, I can easily put Codesmith as my top preference. They
+                    place a higher importance on soft skills rather than technical know-how. Even so, their entrance
+                    requirements have also been the most technically challenging. They have an active online
+                    community which I've enjoyed participating in, and engaging lectures with great instructors.
+                  </p>
+                  <p>
+                    I'll say in general though, that I initially viewed software boot camps with a lot of
+                    skepticism. Now I see boot camps as being a disruptive to the college/univeristy educational
+                    model. Having spent 6 years of my life earning my degrees and spending a small fortune on
+                    tuition, I've probably only used 1/10th of what I learned in university at my job. Everything I
+                    have learned during the boot camp application process is very relevant to what I want to do and
+                    the quality of the teaching and materials are comparable to the best courses I took in
+                    university. I think I would have been happy with any of the programs, but I am releived that I
+                    was accepted into Codesmith.
+                    <!-- Their next cohort doesn't start for another two months, so I've
+                                        enrolled in their <a href="https://www.codesmith.io/bootcamp-prep" title="CS Prep">CS Prep
+                                            program</a>, which is a 3 week course designed to help students get into a boot camp, but
+                                        I've found even their basic lectures have value in teaching technical and non-technical
+                                        communication. I also plan on taking several Udemy courses on web design and refining this
+                                        website. One thing is for certain, there is a lot to know when it comes to website design, so
+                                        there's no excuse not to stay busy. -->
+                  </p>
+                </div>
+                
+                <div class="blog">
+                  <h1>JavaScript First Impressions</h1>
+                  <h2>Apr 29th, 2020</h2>
+                  <p>
+                    Thankfully I had more time to learn JavaScript than Ruby. Out of all the programming languages I
+                    have learned, it is the weirdest. It imitates many of the programming paradigms I've
+                    encountered, but operates completely differently. The best comparison I can think of is JS is a
+                    lot like a sleeper car; unassuming, powerful under-the-hood, and fragile if not used correctly.
+                    With that said, I don't think I've ever had as much fun learning a language since I first
+                    learned Visual Basic back in high school. I'm currently working through <a href="https://csx.codesmith.io/home"
+                      title="CSX">CSX</a> which is Codesmith's free online
+                    JavaScript course, which seems to be very comprehensive. I'm finding it much more difficult than
+                    the Ruby coursework offered by App Academy; it's forcing me to look at other resources and
+                    participate in Codesmith's online community to reach out for help. This may sound like a bad
+                    thing, but this was my experience as a Mechanical Engineer as well. Engineering is difficult for
+                    good reasons and I'm enjoying the challenge.
+                  </p>
+                  <!-- <p>
+                            On the boot camp application front, I recently learned I passed App Academy's technical interview as well as the non-technical interview I just had yesterday. This means I've been accepted into the program but I need to finish their HTML/CSS, Git, and boolean logic coursework before May 8th before I can enroll in the next cohort.
+                          </p>
+                          <p>
+                            I've also applied to Codesmith's and Full Stack Academy's programs. I'm feeling comfortable enough with JS to complete Full Stack Academy's coding entrance exam tomorrow. In Codesmith's case this involved writing several essay style questions, which took a day in of itself. I also had my non-technical interview today with Codesmith, which is difficult to say how well it went since they appear to stress the non-technical aspects of Software Engineering the most.
+                          </p> -->
+                </div>
+                
+                <div class="blog">
+                  <h1>Boot Camp Application First Impressions</h1>
+                  <h2>Apr 25th, 2020</h2>
+                  <p>
+                    Well, I may be overreaching a bit with applying to 3 different boot camps. First of all, they
+                    all have their own entrance requirements. App Academy requires technical assessments in Ruby,
+                    while Full Stack Academy and Codesmith's assessments are in JavaScript. I knew nothing about
+                    either language last week, but because the cut-off for App Academy's next cohort application was
+                    yesterday, I know Ruby now! Luckily, I found Ruby very syntactically similar to Python, so it
+                    wasn't too difficult.
+                  </p>
+                  <p>
+                    I really need to commend App Academy's application process. The first step involves completing a
+                    reading and logical assessment similar to a standardized English test and an IQ test. Both are
+                    timed, which I loathe, but I understand that it's probably the best way for App Academy to sort
+                    out anyone who doesn't have the capability to program without actually testing programming
+                    skills. I didn't feel I performed well myself, but luckily I did well enough to pass. Next, I
+                    had to complete their Introduction to Ruby coursework and pass an online written programming
+                    test in Ruby. The fact I was able to pick up Ruby in two days really speaks to the quality of
+                    the course material and exercises. Lastly, I had a remote technical interview yesterday that
+                    involved pair programming, which is also a new concept to me. Overall, I found the technical
+                    assessments to be quite easy, though I feel that anyone without a background in programming
+                    would struggle through even on a longer timeline. I should hear if I passed next week, but now
+                    I'll need to focus on my applications for Codesmith and Full Stack Academy. Onto learning JS!
+                  </p>
+                </div>
+                
+                <div class="blog">
+                  <h1>Software Boot Camps</h1>
+                  <h2>April 19th, 2020</h2>
+                  <p>The most common advice I've received about starting a career in Software Engineering is to enroll
+                    in a software boot camp. Apparently, boot camps have an established track record of
+                    employability and I've received a lot of anecdotal evidence to back this up. This is great news
+                    for me considering that most of these programs are a few months in length as opposed to a few
+                    years for a Software Engineering degree, so I've decided to go ahead and apply. The majority of
+                    boot camp programs are focused on full stack web development; while I had not decided on what
+                    area to specialize in, web development fits well with what I want to do and learn, and has
+                    optimistic job growth. However, there are a plethora of boot camps, and even deciding on which
+                    to apply to has been a challenge. I've narrowed the search down to three: App Academy, Full
+                    Stack Academy, and Codesmith. I selected these boot camps because Full Stack and Codesmith had
+                    the best employment outcomes on <a href="https://cirr.org/data"
+                      title="January - June 2019 Graduate Outcomes">CIRR</a> last year and App Academy because it
+                    showed up in both <a href="https://www.coursereport.com/best-coding-bootcamps"
+                      title="The 48 Best Coding Bootcamps">Course Report's</a> and <a
+                      href="https://www.switchup.org/rankings/best-coding-bootcamps" title="2020 Best Coding Bootcamps">SwitchUp's</a>
+                    top 5, though it was not transparent on
+                    employment outcomes on <a href="https://cirr.org/data" title="January - June 2019 Graduate Outcomes">CIRR</a>.
+                    Codesmith's outcomes were by far the
+                    most impressive: 92.1% employed in 180 days and $125K average starting salary in their NY
+                    program in H1 2019, which seems to good to be true. I guess someone else thought so because they
+                    were independently audited. First and foremost, my goal is employability as a Software Engineer,
+                    so my plan is to use the application period as a way to learn more about each without commiting.
+                    We'll see how it goes.</p>
+                </div>
+                
+                <div class="blog">
+                  <h1>Onward and Upward!</h1>
+                  <h2>Apr 18th, 2020</h2>
+                  <p>I was always told that the two best working days you'll have in your Schlumberger career is your
+                    first and your last. I can tell you from personal experience that, while this may not the case
+                    for everyone, the statement is true to me. Not to say I didn't enjoy my 10 years with the
+                    company, but I've always regretted that I did not pursue a career in software and automation.
+                    Now without the weight of responsibility that I had with Schlumberger, I am finally free to
+                    pursue a career that I want for myself.</p>
+                  <p>I cannot tell you how excited I am to get back into software. Software Engineering and Computer
+                    Science were my dream careers as a teenager but, since I graduated around the dot-com boom and
+                    bust, I was always told there were no jobs. Ironic hearing that in 2020. Turns out that "follow
+                    your passion" is some good advice.</p>
+                  <p>I'm expecting my transition to Software Engineering to be a challenging one since I'll need to
+                    prove I can do the job without ever having held the title or the degree. The last time I was in
+                    this situation I at least had my degrees and transcript to point to that demonstrated I had the
+                    requisite knowledge, but even then it didn't prove I could do the job. The advantage I have
+                    becoming a Software Engineer is that I can readily demonstrate what I know and what I can do -
+                    by building a website. This is why this site exists and, possibly, why you are here; to assess
+                    my competency. Regardless of the reason, I appreciate the time you have taken to explore my
+                    website and learn more about me. Feel free to reach out to me - I'd love to get some feedback on
+                    how to do things better or just knowing that someone actually visited a site I've put many hours
+                    into. Regardless, I hope you enjoy your time here and thanks for visiting. Onward and upward!
+                  </p>
+                </div>
         </div>
 
-      </main>
       </div>
-    </div>
-
-
+      </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
